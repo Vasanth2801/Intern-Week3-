@@ -22,4 +22,23 @@ Features Implemented:
 * Knockbackforce when player got touched 
 
 Summary:
-* Today I have learned about how to make enemies smartly follow the player which i have not worked on before 
+* Today I have learned about how to make enemies smartly follow the player which i have not worked on before
+
+Task : Powerups and UI
+
+What I have learned :
+* First I learned to create powerups for different effects
+* Then I have learned to how to do the shop items for game 
+
+Implementation(Step by step):
+* first created two gameobjects and make it trigger and added to the gameobjects and make it as a scriptable object
+* Now we will make the player touches and it will do certain effects
+* Now we will create a UI canvas for the shop of the upgrade system
+* Added two upgrades and when we press the button the upgrade will increase 
+
+Features Implemented:
+* powerups for the player to pick for the health and speed
+* Ui for the upgrade system 
+
+Summary:
+* Powerups for the player(Health and speed) implemeted which is new to me and the upgrade shop when the buy button pressed it will increase
