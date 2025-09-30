@@ -1,14 +1,18 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    public  float moveSpeed = 5f;
     Rigidbody2D rb;
     PlayerController playerController;
     Vector2 movement;
     public float knockbackForce = 10f; // Force of the knockback
+    public float health = 100;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private Image healthImage;
 
     private bool isKnockedback = false; // Flag to check if the player is currently being knocked back
 
@@ -16,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerController = new PlayerController();
-
+        maxHealth = health;
         MovementCalling();
 
     }
@@ -38,9 +42,14 @@ public class PlayerMovement : MonoBehaviour
         playerController.Player.Disable();
     }
 
+    void Update()
+    {
+        healthImage.fillAmount = Mathf.Clamp(health/maxHealth, 0, 1);
+    }
+
     private void FixedUpdate()
     {
-        if (isKnockedback)
+        if (isKnockedback == false                                                                                                  )
         {
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }                      
