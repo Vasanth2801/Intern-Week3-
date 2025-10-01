@@ -42,3 +42,23 @@ Features Implemented:
 
 Summary:
 * Powerups for the player(Health and speed) implemeted which is new to me and the upgrade shop when the buy button pressed it will increase
+
+Task : BossBattle Implementation 
+
+What I have Learned:
+* How to create a Healthbar System with coloured effect when it gets low 
+
+Implementation(Step by Step):
+* First setup the scene with a player and a ground which makes the platformer to fight the boss
+* Now add the sprite for the boss and make the sprite a little bigger which makes it look like a boss
+* Now lets make the health bar for the boss which if the player do damages the health will go down with a colour effect
+* Now We will add the logic script for the health effect shich will decrease as the player damages the enemy and we wil know the health by the colour of the bar up
+* Then I Moved to the Boss Animations from the sprite I have downloaded they are idle,run and jump animations but the intro animation was not there
+* So I thought of creating it using the  properities of the Sprite it has and make the enemy come fall from above and then assemble the body and then start attcking
+* And came out pretty good as expected and then I moved to the animator window and set it the intro animation as entry from that to the idle and run animations
+* Now using the script we will make the state behaviour for the boss 
+
+Features Implementated:
+* Health bar system for the boss
+* Intro Animations for the Boss when the game Starts 
+
