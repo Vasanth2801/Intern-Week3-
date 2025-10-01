@@ -46,7 +46,8 @@ Summary:
 Task : BossBattle Implementation 
 
 What I have Learned:
-* How to create a Healthbar System with coloured effect when it gets low 
+* How to create a Healthbar System with coloured effect when it gets low
+* How to implement the boss battle with phases and attack the player 
 
 Implementation(Step by Step):
 * First setup the scene with a player and a ground which makes the platformer to fight the boss
@@ -56,9 +57,11 @@ Implementation(Step by Step):
 * Then I Moved to the Boss Animations from the sprite I have downloaded they are idle,run and jump animations but the intro animation was not there
 * So I thought of creating it using the  properities of the Sprite it has and make the enemy come fall from above and then assemble the body and then start attcking
 * And came out pretty good as expected and then I moved to the animator window and set it the intro animation as entry from that to the idle and run animations
-* Now using the script we will make the state behaviour for the boss 
+* Now using the script we will make the state behaviour for the boss
+* Now created new three scripts for the boss one for flipping,attacking and handling the states for the enemy to attack the player 
 
 Features Implementated:
 * Health bar system for the boss
-* Intro Animations for the Boss when the game Starts 
+* Intro Animations for the Boss when the game Starts
+* Boss attacking the player with normla and rage modes 
 
