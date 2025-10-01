@@ -16,5 +16,10 @@ public class BossHealth : MonoBehaviour
     {
         currentHealth -= damage;
         bossHealthBar.SetHealth(currentHealth);
+
+        if (currentHealth < 50)
+        {
+            GetComponent<Animator>().SetBool("IsRaged", true);
+        }
     }
 }
