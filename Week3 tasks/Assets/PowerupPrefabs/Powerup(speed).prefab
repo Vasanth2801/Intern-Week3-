@@ -141,3 +141,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpeedUp
   speedupEffect: {fileID: 11400000, guid: 359c6ee1909e25e44b6e4fb2dbebc2b3, type: 2}
+  speedEffect: {fileID: 1000011210275196, guid: fa35d75604d172d48b7a6b62a07c7dbf, type: 3}
