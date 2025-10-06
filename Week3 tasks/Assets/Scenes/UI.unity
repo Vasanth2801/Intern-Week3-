@@ -3598,7 +3598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf9366b180661b48a66acd9d9123ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  pausePanel: {fileID: 0}
 --- !u!4 &2102565543
 Transform:
   m_ObjectHideFlags: 0
