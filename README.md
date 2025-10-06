@@ -65,3 +65,21 @@ Features Implementated:
 * Intro Animations for the Boss when the game Starts
 * Boss attacking the player with normla and rage modes 
 
+
+Task : UI workflows 
+
+What I have Leanred :
+* How to create Start menu,settings menu and pause menu with animations
+* How to create a wave animations for the enemy waves
+* How to add UI transtions and adjusting the screen size according ti the scene 
+
+Implementation(Step by step):
+* First created a Ui and added the acoording buttons to that and add the logic to the functions
+* We will create some UI animations for smoth trantions
+* Also we will add some animations for waves enemy and saving the highscore data 
+
+Features Implemented:
+* Ui for the Game
+* Animations for the UI transtions
+* Scoring the Data and Scores
+
