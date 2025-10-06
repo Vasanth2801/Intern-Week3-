@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float health = 100;
     [SerializeField] private float maxHealth;
     [SerializeField] private Image healthImage;
+    private Animator animator;
 
     private bool isKnockedback = false; // Flag to check if the player is currently being knocked back
 
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerController = new PlayerController();
+        animator = GetComponent<Animator>();
         maxHealth = health;
         MovementCalling();
 
@@ -49,11 +51,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isKnockedback == false                                                                                                  )
+        if (isKnockedback == false)
         {
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        }                      
-        
+           rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            animator.SetFloat("Speed", Mathf.Abs(moveSpeed));
+        }
+        else 
+        {
+            return;
+        }
     }
 
 

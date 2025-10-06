@@ -40,7 +40,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (!p.error)
         {
-            path = p;
+            path = p;                       
             currentWayPoint = 0;
         }
     }
