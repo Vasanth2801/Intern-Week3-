@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 
-
 [System.Serializable]
 public class Wave
 {
@@ -35,10 +34,6 @@ public class EnemySpawner : MonoBehaviour
             canAnimate = false;
             SpawnAnotherWave();
         }
-        else
-        {
-            Debug.Log("WavesComplete");
-        }
     }
 
     void SpawnAnotherWave()
@@ -63,9 +58,5 @@ public class EnemySpawner : MonoBehaviour
                 canAnimate = true;
             }
         }
-
-
-       
     }
-
 }
