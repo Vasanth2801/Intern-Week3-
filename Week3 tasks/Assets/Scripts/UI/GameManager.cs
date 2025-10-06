@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+  
 
     private void Awake()
     {
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+   
 
     public void PlayGame()
     {

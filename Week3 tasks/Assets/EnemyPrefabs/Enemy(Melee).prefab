@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4224607515424905390}
   m_Layer: 0
   m_Name: Enemy(Melee)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34bc71bead5d2a94a8176a4a35ba7be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  target: {fileID: 0}
+  target: {fileID: 2358086310273649019, guid: b53c3f1b05bb8324fb6a3d4f84046b1f, type: 3}
   speed: 400
   nextWayPointDistance: 2
   KnockBackForce: 20
