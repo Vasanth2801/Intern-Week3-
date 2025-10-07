@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class SimplePlayerMovement : MonoBehaviour
 {
-   public float speed = 5f;
+    public float speed = 5f;
     private Rigidbody2D rb;
     private Animator animator;
     float moveInputX;
-    float moveInputY;
+    public bool isFacingRight = true;
 
     private void Awake()
     {
@@ -17,11 +17,23 @@ public class SimplePlayerMovement : MonoBehaviour
     private void Update()
     {
          moveInputX = Input.GetAxisRaw("Horizontal");
-         moveInputY = Input.GetAxisRaw("Vertical");
+
+        Flip();
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(moveInputX * speed,moveInputY * speed);
+        rb.linearVelocity = new Vector2(moveInputX * speed,rb.linearVelocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(moveInputX));
     }
+
+    void Flip()
+    {
+        if(isFacingRight && moveInputX < 0 || !isFacingRight && moveInputX > 0)
+        {
+            isFacingRight = !isFacingRight;
+
+            transform.Rotate(0f, 180f, 0f);
+        }
+    }    
 }

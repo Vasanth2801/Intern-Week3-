@@ -3,19 +3,19 @@ using UnityEngine;
 
 public class SimpleEnemy : MonoBehaviour
 {
-    PlayerMovement playerMovement;
+    //PlayerMovement playerMovement;
     [SerializeField] private float damage = 5f;
 
     void Start()
     {
-        playerMovement = FindObjectOfType<PlayerMovement>();
+        //playerMovement = FindObjectOfType<PlayerMovement>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            playerMovement.health -= damage;
+            //playerMovement.health -= damage;
         }
     }
 }

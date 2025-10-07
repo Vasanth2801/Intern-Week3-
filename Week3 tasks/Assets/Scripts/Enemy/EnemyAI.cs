@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
     Seeker seeker;           // Seeker component for pathfinding
     Rigidbody2D rb;          // rigidbody component for physics
 
-    private PlayerMovement playerMovement; // Reference to the PlayerMovement script
+    //private PlayerMovement playerMovement; // Reference to the PlayerMovement script
     public float KnockBackForce = 10f; // Force of the knockback
 
 
@@ -22,7 +22,7 @@ public class EnemyAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();  // Get the Seeker component
         rb = GetComponent<Rigidbody2D>();   // Get the Rigidbody2D component
-        playerMovement = FindObjectOfType<PlayerMovement>(); // Find the PlayerMovement script in the scene
+       // playerMovement = FindObjectOfType<PlayerMovement>(); // Find the PlayerMovement script in the scene
 
         InvokeRepeating("UpdatePath", 0f, 0.5f); // Update the path every 0.5 seconds
     }
@@ -77,7 +77,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                playerMovement.Knockback(transform,KnockBackForce); // Call the Knockback method from the PlayerMovement script
+                //playerMovement.Knockback(transform,KnockBackForce); // Call the Knockback method from the PlayerMovement script
             }
         }
     }
