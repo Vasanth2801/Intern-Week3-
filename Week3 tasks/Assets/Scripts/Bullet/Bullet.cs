@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
             slowMotioneffect.SlowMotion();
             Instantiate(explosionEffect,transform.position,transform.rotation);
-            Destroy(explosionEffect);
+            Destroy(gameObject);
             Destroy(other.gameObject);
         }
     }

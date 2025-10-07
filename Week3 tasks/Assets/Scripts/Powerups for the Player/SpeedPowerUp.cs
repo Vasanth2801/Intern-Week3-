@@ -4,8 +4,8 @@ using System.Collections;
 public class SpeedPowerUp : MonoBehaviour
 {
     
-    public GameObject healthEffect;
-    public float multiplier = 1.6f;
+    public GameObject speedEffect;
+    public float multiplier = 500f;
     public float duration = 4;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -19,7 +19,7 @@ public class SpeedPowerUp : MonoBehaviour
             
         IEnumerator PowerupPicked(Collider2D Player)
         {
-            Instantiate(healthEffect,transform.position,transform.rotation);
+            Instantiate(speedEffect,transform.position,transform.rotation);
 
             Player.GetComponent<SimplePlayerMovement>().speed += multiplier;
 

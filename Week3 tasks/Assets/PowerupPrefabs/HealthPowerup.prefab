@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3030508580570893304}
   - component: {fileID: 7986026692202098612}
   - component: {fileID: 2708135466704345562}
+  - component: {fileID: 6642705416306988927}
   m_Layer: 0
   m_Name: HealthPowerup
   m_TagString: Untagged
@@ -58,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,3 +128,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.03983903, y: -0.101810694}
   m_Radius: 0.3646264
+--- !u!114 &6642705416306988927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716441343180797253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0112eda8263f1b4419c8ec2a3b4ab196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthPowerUp
