@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26b021bd7133ea478db9bfa15136a78, type: 3}
   m_Name: SpeedBoost
   m_EditorClassIdentifier: Assembly-CSharp::SpeedBuff
-  amount: 15
+  amount: 2

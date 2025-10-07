@@ -4,7 +4,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
     Rigidbody2D rb;
-    public GameObject explosioneffect;
+    public GameObject explosionEffect;
 
 
     private void Awake()
@@ -23,9 +23,9 @@ public class Bullet : MonoBehaviour
         {
             Debug.Log("Enemy Hit");
             Destroy(this.gameObject);
-            Instantiate(explosioneffect,transform.position,transform.rotation);
+            Instantiate(explosionEffect,transform.position,transform.rotation);
+            Destroy(explosionEffect);
             Destroy(other.gameObject);
-            Destroy(explosioneffect);
         }
     }
 }

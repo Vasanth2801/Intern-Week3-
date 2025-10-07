@@ -9,4 +9,9 @@ public class HealthBuff : PowerupEffect
     {
         //target.GetComponent<PlayerMovement>().health += amount;
     }
+
+    public override void Remove(GameObject target)
+    {
+
+    }
 }

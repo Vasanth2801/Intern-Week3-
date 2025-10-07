@@ -7,6 +7,8 @@ public class SimplePlayerMovement : MonoBehaviour
     private Animator animator;
     float moveInputX;
     public bool isFacingRight = true;
+    public float jumpForce = 9f;
+    private bool isJumping = false;
 
     private void Awake()
     {
@@ -17,6 +19,13 @@ public class SimplePlayerMovement : MonoBehaviour
     private void Update()
     {
          moveInputX = Input.GetAxisRaw("Horizontal");
+
+         if(Input.GetKeyDown(KeyCode.Space) && !isJumping)
+         {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            isJumping = true;
+            animator.SetBool("Jump", true);
+         }
 
         Flip();
     }
@@ -35,5 +44,15 @@ public class SimplePlayerMovement : MonoBehaviour
 
             transform.Rotate(0f, 180f, 0f);
         }
-    }    
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Ground") && isJumping)
+        {
+            isJumping = false;
+            animator.SetBool("Jump", false);
+        }
+    }
 }
