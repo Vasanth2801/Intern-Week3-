@@ -83,3 +83,21 @@ Features Implemented:
 * Animations for the UI transtions
 * Scoring the Data and Scores
 
+
+Task : Parallax and visual effects
+
+What I have learned:
+* How to create a background parallax moving background
+* Lighting and postprocessing effects
+* Particle eefects and slowmotion effects
+
+Implementatio(Step by step):
+* Created the scene and added the backgrounds for it   and added the logics for it
+* Created the Gloabal volume and added the post processsing for the bloom
+* Created  the Particles effect for the powerups and bullet colliding 
+
+Features Implemented:
+* Parallax Backgrounds
+* PostProcessign and light effects
+* Particle effects for powerups and bullets
+
