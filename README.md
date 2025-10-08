@@ -101,3 +101,9 @@ Features Implemented:
 * PostProcessign and light effects
 * Particle effects for powerups and bullets
 
+
+Task: Testing and Bugfixing 
+
+* Understood the importance of findidng before submitting the project
+* Coz i find varoius minor bugs which affects the player experince 
+
