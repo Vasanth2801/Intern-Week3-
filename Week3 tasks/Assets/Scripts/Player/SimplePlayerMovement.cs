@@ -10,10 +10,20 @@ public class SimplePlayerMovement : MonoBehaviour
     public float jumpForce = 9f;
     private bool isJumping = false;
 
+    public int maxHealth = 100;
+    public int  currentHealth;
+    public PlayerHealthBar playerHealthBar;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+        playerHealthBar.SetMaxHealth(maxHealth);
     }
 
     private void Update()
@@ -28,6 +38,11 @@ public class SimplePlayerMovement : MonoBehaviour
          }
 
         Flip();
+
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            Takedamage(20);
+        }
     }
 
     private void FixedUpdate()
@@ -36,13 +51,15 @@ public class SimplePlayerMovement : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(moveInputX));
     }
 
-    void Flip()
+    public void Flip()
     {
         if(isFacingRight && moveInputX < 0 || !isFacingRight && moveInputX > 0)
         {
             isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1;
+            transform.localScale = localScale;
 
-            transform.Rotate(0f, 180f, 0f);
         }
     }
 
@@ -54,5 +71,13 @@ public class SimplePlayerMovement : MonoBehaviour
             isJumping = false;
             animator.SetBool("Jump", false);
         }
+    }
+
+
+    public void Takedamage(int damage)
+    {
+        currentHealth -= damage;
+            
+        playerHealthBar.SetHealth(currentHealth);
     }
 }

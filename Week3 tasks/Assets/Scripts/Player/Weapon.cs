@@ -3,7 +3,9 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Transform firepoint;
-    public GameObject bullet;
+    public ObjectPooler pooler;
+    public GameObject Bullet;
+
 
     void Update()
     {
@@ -15,6 +17,6 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bullet,firepoint.position,firepoint.rotation);
+         pooler.SpawnObjects("Bullet",firepoint.position,firepoint.rotation);
     }
 }

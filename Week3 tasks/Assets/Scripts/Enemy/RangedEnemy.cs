@@ -22,6 +22,7 @@ public class RangedEnemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();       // Get the Rigidbody2D component
         timer = fireRate;       // Initialize the timer with fire rate
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame

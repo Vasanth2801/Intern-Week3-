@@ -5,29 +5,50 @@ public class Bullet : MonoBehaviour
     public float speed = 20f;
     Rigidbody2D rb;
     public GameObject explosionEffect;
-    private SlowMotioneffect slowMotioneffect;
+    
+    public float lifeofBullet = 7f;
+    private float lifeTimer;
+    
+
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        slowMotioneffect = FindAnyObjectByType<SlowMotioneffect>();
+       
+    }
+
+    private void OnEnable()
+    {
+        lifeTimer = lifeofBullet;
+        if(rb != null)
+        {
+            rb.linearVelocity = transform.right * speed;
+        }
+       
     }
 
     private void Update()
     {
-        rb.linearVelocity = transform.right * speed;
+        lifeTimer -= Time.deltaTime;
+        if(lifeTimer <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
+   
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Enemy"))
+        if(other.gameObject.CompareTag("Enemy") )
         {
             Debug.Log("Enemy Hit");
-            Destroy(this.gameObject);
-            slowMotioneffect.SlowMotion();
+            EnemyHealth.Instance.TakeDamage(10);
+            ScoreManager.instance.AddScore(10);
             Instantiate(explosionEffect,transform.position,transform.rotation);
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
     }
+
+   
 }

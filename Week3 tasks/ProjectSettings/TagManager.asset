@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - Boss
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -72,6 +74,9 @@ TagManager:
     locked: 0
   - name: Mist10
     uniqueID: 4072370091
+    locked: 0
+  - name: Visuals
+    uniqueID: 404303081
     locked: 0
   - name: Ground
     uniqueID: 11852337
