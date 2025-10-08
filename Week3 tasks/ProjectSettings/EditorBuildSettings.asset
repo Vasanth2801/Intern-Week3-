@@ -5,15 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/EnemyAI.unity
-    guid: 27740efea0c2f3046a2552bced4aa808
   - enabled: 1
-    path: Assets/Scenes/UI.unity
+    path: Assets/Scenes/GameScenes/StartMenu.unity
     guid: 7b4dc0ca8e277834cbcc0c83288b845e
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: ef392454ad2fee744a8166d7842649fd
+    path: Assets/Scenes/GameScenes/MainScene.unity
+    guid: a18ad96dfd603b44cb41e511c27301c0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
