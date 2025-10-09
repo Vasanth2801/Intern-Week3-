@@ -1,4 +1,20 @@
 # Intern-Week3-
+
+Task : Build the Final Game 
+
+What I have Learned : 
+* I have learned how to Create a Platformer type movements and enemys for the game
+* Post processing and Lighting effects
+* Boss Battles and Enemy types 
+
+Controls:
+
+* PlayerMovement - WASD or ArrowKeys
+* Jumping - Space
+* Shooting - LeftShift 
+
+
+
 Task : Enemy navmeshagent and AI 
 
 What I have Learned :
