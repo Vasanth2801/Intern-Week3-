@@ -31,13 +31,5 @@ public class Boss : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Bullet"))
-        {
-            HealthBoss.Instance.TakeDamage(30);
-            ScoreManager.instance.AddScore(30);
-            // bossHealth.Die();
-        }
-    }
+    
 }

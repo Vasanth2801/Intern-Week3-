@@ -18,5 +18,6 @@ public class Weapon : MonoBehaviour
     void Shoot()
     {
          pooler.SpawnObjects("Bullet",firepoint.position,firepoint.rotation);
+        AudioManager.instance.PlayGunSound();
     }
 }

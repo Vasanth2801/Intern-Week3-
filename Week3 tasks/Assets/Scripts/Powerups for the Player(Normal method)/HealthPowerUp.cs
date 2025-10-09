@@ -10,7 +10,7 @@ public class HealthPowerUp : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Instantiate(healthEffect,transform.position,transform.rotation);
+            //Instantiate(healthEffect,transform.position,transform.rotation);
 
             // reference to the player health 
 

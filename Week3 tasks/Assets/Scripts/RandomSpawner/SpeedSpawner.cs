@@ -2,27 +2,32 @@ using UnityEngine;
 
 public class SpeedSpawner : MonoBehaviour
 {
-    public GameObject objectToSpawn;
+    public Transform speedSpawner;
 
-    public float timeToSpawn;
+    public float timeToSpawn = 4f;
+    public float timer;
+    public ObjectPooler pooler;
 
-    public float spawningTime;
-    private float timer;
-    void Update()
+    void Start()
     {
-        if(spawningTime > 0)
+        timer = timeToSpawn;
+    }
+
+    private void Update()
+    {
+        if(timer > 0)
         {
-            spawningTime -= Time.deltaTime;
+            timer -= Time.deltaTime;
         }
         else
         {
-            SpawnSpeedObject();
-            spawningTime = 20f;
+            SpawnObject();
+            timer = timeToSpawn;
         }
     }
 
-    void SpawnSpeedObject()
+    void SpawnObject()
     {
-        Instantiate(objectToSpawn, objectToSpawn.transform);
+         pooler.SpawnObjects("SpeedPowerup", speedSpawner.position, Quaternion.identity);
     }
 }

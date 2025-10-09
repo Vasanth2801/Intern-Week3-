@@ -9,6 +9,7 @@ public class Attack_Boss : MonoBehaviour
     public float attackRange = 3f;
     public LayerMask attackMask;
     public CameraShake cameraShake;
+    
 
     public void Attack()
     {
@@ -19,8 +20,8 @@ public class Attack_Boss : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            // Do the damage for the player
 
+            colInfo.GetComponent<SimplePlayerMovement>().Takedamage(20);
             // Ranged attack for the enemy 
             //GameObject fireball = Instantiate(fireBall, transform) as GameObject;
             //Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();

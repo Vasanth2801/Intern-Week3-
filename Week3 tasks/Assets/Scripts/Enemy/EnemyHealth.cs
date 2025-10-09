@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     private SlowMotioneffect slowMotioneffect;
     public int maxHealth = 50;
     public int currentHealth;
+  
 
 
     private void Awake()
@@ -36,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             slowMotioneffect.SlowMotion();
+            AudioManager.instance.PlayEnemyDeath();
             Destroy(gameObject);
         }
     }

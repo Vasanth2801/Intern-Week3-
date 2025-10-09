@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SimplePlayerMovement : MonoBehaviour
 {
+    
     public float speed = 5f;
     private Rigidbody2D rb;
     private Animator animator;
@@ -18,6 +19,8 @@ public class SimplePlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+       
     }
 
     private void Start()
@@ -39,10 +42,7 @@ public class SimplePlayerMovement : MonoBehaviour
 
         Flip();
 
-        if(Input.GetKeyDown(KeyCode.X))
-        {
-            Takedamage(20);
-        }
+
     }
 
     private void FixedUpdate()
@@ -71,7 +71,11 @@ public class SimplePlayerMovement : MonoBehaviour
             isJumping = false;
             animator.SetBool("Jump", false);
         }
+
+        
     }
+
+    
 
 
     public void Takedamage(int damage)
@@ -79,5 +83,25 @@ public class SimplePlayerMovement : MonoBehaviour
         currentHealth -= damage;
             
         playerHealthBar.SetHealth(currentHealth);
+
+        if(currentHealth <= 0)
+        {
+            AudioManager.instance.PlayDeathSound();
+            Destroy(this.gameObject);
+            UIManager.instance.GameOver();
+        }
     }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("EnemyBullet"))
+        {
+
+            Debug.Log("PlayerHit");
+            Takedamage(10);
+            Destroy(this.gameObject);
+        }
+    }
+
 }

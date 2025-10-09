@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -5,7 +6,7 @@ public class Bullet : MonoBehaviour
     public float speed = 20f;
     Rigidbody2D rb;
     public GameObject explosionEffect;
-    
+
     public float lifeofBullet = 7f;
     private float lifeTimer;
     
@@ -36,19 +37,22 @@ public class Bullet : MonoBehaviour
         }
     }
 
-   
+
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Enemy") )
+        if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Enemy Hit");
-            EnemyHealth.Instance.TakeDamage(10);
+            EnemyHealth.Instance.TakeDamage(5);
             ScoreManager.instance.AddScore(10);
-            Instantiate(explosionEffect,transform.position,transform.rotation);
+            Instantiate(explosionEffect, transform.position, transform.rotation);
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
     }
 
-   
+    
 }
+

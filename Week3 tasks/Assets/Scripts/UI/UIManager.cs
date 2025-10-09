@@ -1,11 +1,12 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     public static bool isPaused = false;
     public GameObject pauseMenu;
+    public GameObject gameOverPanel;
 
 
     private void Awake()
@@ -51,4 +52,23 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
     }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+
+    public void GameOver()
+    {
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
 }
