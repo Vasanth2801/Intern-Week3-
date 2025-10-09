@@ -454,54 +454,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &61777214
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 61777216}
-  - component: {fileID: 61777217}
-  m_Layer: 0
-  m_Name: HealthSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &61777216
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61777214}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.86, y: -3.61, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &61777217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61777214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6503889899b88b94ebed92a11edca08f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthSpawner
-  healthSpawner: {fileID: 61777216}
-  timeToSpawn: 30
-  timer: 0
-  pooler: {fileID: 1792035124}
 --- !u!1 &126908481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3494,7 +3446,7 @@ Transform:
   m_GameObject: {fileID: 832237086}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.9, y: -2.4, z: 0}
+  m_LocalPosition: {x: 73.5, y: -3.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8143,9 +8095,6 @@ MonoBehaviour:
   - objectname: Bullet
     poolSize: 6
     poolPrefab: {fileID: 415867898984430006, guid: e1357f60777b01443b1a377eb344f62e, type: 3}
-  - objectname: HealthPowerup
-    poolSize: 1
-    poolPrefab: {fileID: 1716441343180797253, guid: f4fd237c4b68d4a45afa4896d7a2e199, type: 3}
   - objectname: SpeedPowerup
     poolSize: 1
     poolPrefab: {fileID: 3223963779904549066, guid: c304075295e16ce48ab726c541469b0a, type: 3}
@@ -9791,7 +9740,6 @@ SceneRoots:
   - {fileID: 307553959}
   - {fileID: 405765467}
   - {fileID: 536504679}
-  - {fileID: 61777216}
   - {fileID: 832237087}
   - {fileID: 1617189449}
   - {fileID: 10728066}

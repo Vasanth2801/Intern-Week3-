@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject player;       
 
     public bool isFlipped = false;
 

@@ -2,19 +2,24 @@ using UnityEngine;
 
 public class HealthPowerUp : MonoBehaviour
 {
-    public GameObject healthEffect;
+    SimplePlayerMovement  player;
 
-    public float amount = 20f;
+    public int amount = 20;
+
+
+    private void Awake()
+    {
+        player = GetComponent<SimplePlayerMovement>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            //Instantiate(healthEffect,transform.position,transform.rotation);
+            
+                player.GetComponent<SimplePlayerMovement>().currentHealth += amount;
 
-            // reference to the player health 
-
-            Destroy(gameObject);
+                Destroy(gameObject);
         }
     }
 }

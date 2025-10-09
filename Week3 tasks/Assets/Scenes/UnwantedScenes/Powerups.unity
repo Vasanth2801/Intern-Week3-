@@ -2344,9 +2344,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69672aac1e395c941b25f116527b8d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpeedSpawner
-  objectToSpawn: {fileID: 5646660351673442362, guid: e38085338d6de3e4d870cfcffc5b79d0, type: 3}
+  speedSpawner: {fileID: 0}
   timeToSpawn: 0
-  spawningTime: 20
+  timer: 0
+  pooler: {fileID: 0}
 --- !u!1 &1812500010
 GameObject:
   m_ObjectHideFlags: 0
