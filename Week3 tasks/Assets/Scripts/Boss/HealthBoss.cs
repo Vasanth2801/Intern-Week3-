@@ -5,15 +5,12 @@ public class HealthBoss : MonoBehaviour
     public static HealthBoss Instance;
     public int maxHealth = 200;
     public int currentHealth;
-   
-
-
-    
+    SlowMotioneffect slowMotioneffect;
 
     private void Start()
     {
         currentHealth = maxHealth;
-      
+        slowMotioneffect = FindAnyObjectByType<SlowMotioneffect>();
     }
 
     public void TakeDamage(int damage)
@@ -25,6 +22,7 @@ public class HealthBoss : MonoBehaviour
         {
             AudioManager.instance.PlayBossDeath();
             Destroy(gameObject);
+            slowMotioneffect.SlowMotion();
         }
     }
 

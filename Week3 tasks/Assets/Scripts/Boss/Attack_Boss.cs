@@ -21,7 +21,7 @@ public class Attack_Boss : MonoBehaviour
         if (colInfo != null)
         {
 
-            colInfo.GetComponent<SimplePlayerMovement>().Takedamage(20);
+            colInfo.GetComponent<SimplePlayerMovement>().Takedamage(15);
             // Ranged attack for the enemy 
             //GameObject fireball = Instantiate(fireBall, transform) as GameObject;
             //Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
@@ -41,7 +41,8 @@ public class Attack_Boss : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, RageDamage, attackMask);
         if (colInfo != null)
         {
-            // Do the heavy damage for the player 
+            //colInfo.GetComponent<SimplePlayerMovement>().Takedamage(20);
+                
             StartCoroutine(cameraShake.Shake(0.1f, 0.01f));
             Debug.Log("Player got attacked by enemy heavily ");
         }

@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     public static bool isPaused = false;
     public GameObject pauseMenu;
     public GameObject gameOverPanel;
+    public GameObject winScreenPanel;
 
 
     private void Awake()
@@ -71,4 +72,10 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+
+    public void WinScreen()
+    {
+        winScreenPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
 }

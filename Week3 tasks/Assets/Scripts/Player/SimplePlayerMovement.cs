@@ -19,8 +19,6 @@ public class SimplePlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
-       
     }
 
     private void Start()
@@ -41,8 +39,6 @@ public class SimplePlayerMovement : MonoBehaviour
          }
 
         Flip();
-
-
     }
 
     private void FixedUpdate()
@@ -75,9 +71,6 @@ public class SimplePlayerMovement : MonoBehaviour
         
     }
 
-    
-
-
     public void Takedamage(int damage)
     {
         currentHealth -= damage;
@@ -92,7 +85,6 @@ public class SimplePlayerMovement : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("EnemyBullet"))
@@ -100,7 +92,7 @@ public class SimplePlayerMovement : MonoBehaviour
 
             Debug.Log("PlayerHit");
             Takedamage(10);
-            Destroy(this.gameObject);
+            Destroy(other.gameObject);
         }
     }
 

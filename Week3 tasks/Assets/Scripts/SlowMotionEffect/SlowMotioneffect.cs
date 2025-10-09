@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class SlowMotioneffect : MonoBehaviour
 {
-    public float slowMotionEffect = 0.05f;
-    public float slowMotionTime = 1.5f;
+    public float slowMotionEffect = 0.02f;
+    public float slowMotionTime = 3f;
 
     private void Update()
     {
